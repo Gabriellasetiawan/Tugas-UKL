@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form data siswa SIJA 2</title>
+</head>
+<body>
+    
+<form method="post" action="proses_form.php">
+    <table>
+        <tr>
+    <td>
+        <label for="nama">Nama lengkap:</label></td>
+        <td><input type="text" name="nama" placeholder="Nama lengkap" required>
+    </td>
+    </tr>
+    <br>
+    <tr>
+        <td>
+    <td><label for="email">Alamat Email:</label></td>
+    <td><input type="email" name="email" id="email" placeholder="contoh@gmail.com" required>
+        </td>
+    </tr>
+<br>
+<tr>
+    <td>
+    <td><label for="pesan">peasn:</label></td>
+    <td><textarea name="pesan" id="pesan" rows="4" cols="50" placeholder="tulis" required></textarea>
+    </textarea>
+</td>
+    </tr>
+<br>
+<tr>
+    <td>label for="negara">Negara:</label>
+        <select name="negara" id="negara" required>
+            <option value="id">Indonesia</option>
+            <option value="zb">Zimbabwe</option>
+            <option value="rs">Rusia</option>
+</select>
+</td>
+</tr>
+<br>
+<tr>
+   <td><label for="hobi">Hobi:</label>
+    <input type="checkbox" id="membaca" name="hobi" value="membaca">
+<label for="membaca">Membaca</lebel>
+</td> 
+</tr>
+<br>
+<tr>
+   <td><input type="checkbox" id="Berenang" name="hobi" value="Berenang">
+    <label for="berenang">Berenang</label>
+</td> 
+</tr>
+<br>
+<tr>
+    <td><label for="jenis kelamin">Jenis kelamin</label>
+    <input type="radio" id="laki-laki" name="jenis kelamin">
+<label for="laki-laki">Laki-laki</label>
+<br>
+<input type="radio" id="perempuan" name="jenis kelamin">
+<label for="Perempuan">Perempuan</label></td>
+</tr>
+<br>
+    <input type="submit" value="kirim">
+<input ty="reset" value="reset">
+</table>
+</form>
+</body>
+</html>
