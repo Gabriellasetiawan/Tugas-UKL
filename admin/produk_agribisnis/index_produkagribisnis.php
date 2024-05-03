@@ -44,17 +44,18 @@
             </tr>
             <?php
             include '../koneksi.php';
-            $query_mysql = mysqli_query($mysqli, "SELECT * FROM peternak") or die(mysqli_error($mysqli));
+            $query_mysql = mysqli_query($mysqli, "SELECT * FROM produk_agribisnis") or die(mysqli_error($mysqli));
             $nomor = 1;
             while($data = mysqli_fetch_array($query_mysql)) { 
             ?>
             <tr>
                 <td><?php echo $nomor++; ?></td>
-                <td><?php echo $data['Id_peternak']; ?></td>
-                <td><?php echo $data['Nama_peternak']; ?></td>
-                <td><?php echo $data['Umur_peternak']; ?></td>
-                <td><a href='edit_peternak.php?id=<?php echo $data['Id_peternak'];?>'>Edit</a>
-                <a href='delete_peternak.php?id=<?php echo $data['Id_peternak'];?>'>Delete</a>
+                <td><?php echo $data['id_produk']; ?></td>
+                <td><?php echo $data['nama']; ?></td>
+                <td><?php echo $data['jenis']; ?></td>
+                <td><?php echo $data['jumlah']; ?></td>
+                <td><a href='edit_produk_agribisnis.php?id=<?php echo $data['id_produk'];?>'>Edit</a>
+                <a href='delete_produk_agribisnis?id=<?php echo $data['id_produk'];?>'>Delete</a>
             </td>
             
             <?php } ?>
