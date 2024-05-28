@@ -15,7 +15,7 @@
             <li><a href="petani/indexpetani.php">Petani</a></li>
             <li><a href="peternak/index_peternak.php">Peternak</a></li>
             <li><a href="penjualan/index_penjualan.php">Penjualan</a></li>
-            <li><a href="produk_agribisnis/index_produkagribisnis.php">Produk Agribisnis</a></li>
+            <li><a href="produk_agribisnis/index_produkagribisnis.php">Market</a></li>
             <li><a href="kelas/index_kelas.php">Kelas</a></li>
         </Ul>
         </nav>
@@ -29,34 +29,34 @@
         </section>
     </main>
     <section class="user">
-    <h1 class=".heading">Data penjualan</h1>
+    <h1 class=".heading">Data Market</h1>
     <br>
-        <a href="form_register.php" class="btn">Tambah Penjualan</a>
+        <a href="form_register.php" class="btn">Tambah Market</a>
         <br>
         <br>
         <table border="1" class="table">
             <tr>
                 <th>Nomor</th>
-                <th>id_produk</th>
-                <th>nama</th>
-                <th>jenis</th>
-                <th>jumlah</th>
+                <th>id_market</th>
+                <th>nama_market</th>
+                <th>jenis_market</th>
+                <th>isi_market</th>
                 <th>kelola</th>
 
 
             </tr>
             <?php
             include '../koneksi.php';
-            $query_mysql = mysqli_query($mysqli, "SELECT * FROM produk_agribisnis") or die(mysqli_error($mysqli));
+            $query_mysql = mysqli_query($mysqli, "SELECT * FROM market") or die(mysqli_error($mysqli));
             $nomor = 1;
             while($data = mysqli_fetch_array($query_mysql)) { 
             ?>
             <tr>
                 <td><?php echo $nomor++; ?></td>
-                <td><?php echo $data['id_produk']; ?></td>
-                <td><?php echo $data['nama']; ?></td>
-                <td><?php echo $data['jenis']; ?></td>
-                <td><?php echo $data['jumlah']; ?></td>
+                <td><?php echo $data['id_market']; ?></td>
+                <td><?php echo $data['nama_market']; ?></td>
+                <td><?php echo $data['jenis_market']; ?></td>
+                <td><?php echo $data['isi_market']; ?></td>
                 <td><a href='edit_produk_agribisnis.php?id=<?php echo $data['id_produk'];?>'>Edit</a>
                 <a href='delete_produk_agribisnis?id=<?php echo $data['id_produk'];?>'>Delete</a>
             </td>

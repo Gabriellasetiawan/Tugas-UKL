@@ -15,7 +15,7 @@
             <li><a href="petani/indexpetani.php">Petani</a></li>
             <li><a href="peternak/index_peternak.php">Peternak</a></li>
             <li><a href="penjualan/index_penjualan.php">Penjualan</a></li>
-            <li><a href="produk_agribisnis/index_produkagribisnis.phps">Produk Agribisnis</a></li>
+            <li><a href="produk_agribisnis/index_produkagribisnis.phps">Market</a></li>
             <li><a href="kelas/index_kelas.php">Kelas</a></li>
         </Ul>
         </nav>

@@ -11,7 +11,7 @@
         <ul>
             <li><a href="/Aquaponic Bussines Tugas akhir dasprog/user/Information.php">Information</a></li>
             <li><a href="/Aquaponic Bussines Tugas akhir dasprog/user/class.php">Class</a></li>
-            <li><a href="/Aquaponic Bussines Tugas akhir dasprog/user/Tutorial.php">Market</a></li>
+            <li><a href="/Aquaponic Bussines Tugas akhir dasprog/user/market.php">Market</a></li>
             <li><a class="login" href="/Aquaponic Bussines Tugas akhir dasprog/hallogin.php">Login</a></li>
         </ul>
     </nav>
