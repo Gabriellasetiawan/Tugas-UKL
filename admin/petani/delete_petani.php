@@ -1,7 +1,7 @@
 <?php
 include_once("../koneksi.php");
 
-$id = $_GET['ID_petani'];
+$id = $_GET['id'];
 $result= mysqli_query($mysqli, "DELETE FROM petani WHERE ID_petani=$id");
-header("Location:index.php");
+header("Location:./indexpetani.php");
 ?>

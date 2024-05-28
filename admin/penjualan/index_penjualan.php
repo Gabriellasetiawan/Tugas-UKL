@@ -15,7 +15,8 @@
             <li><a href="petani/indexpetani.php">Petani</a></li>
             <li><a href="peternak/index_peternak.php">Peternak</a></li>
             <li><a href="penjualan/index_penjualan.php">Penjualan</a></li>
-            <li><a href="produk_agribisnis/index_produkagribisnis">Produk Agribisnis</a></li>
+            <li><a href="produk_agribisnis/index_produkagribisnis.php">Produk Agribisnis</a></li>
+            <li><a href="kelas/index_kelas.php">Kelas</a></li>
         </Ul>
         </nav>
         
@@ -30,7 +31,7 @@
     <section class="user">
     <h1 class=".heading">Data Peternak</h1>
     <br>
-        <a href="form_register.php" class="btn">Tambah Peternak</a>
+        <a href="register_penjualan.php" class="btn">Tambah Data Penjualan</a>
         <br>
         <br>
         <table border="1" class="table">

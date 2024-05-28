@@ -6,19 +6,19 @@ if(!isset($_GET['id'])){
 }
 $id= $_GET['id'];
 
-$result= mysqli_query($mysqli, "SELECT * FROM penjualan WHERE Id_penjualan=$Id_penjualan");
+$result= mysqli_query($mysqli, "SELECT * FROM penjualan WHERE Id_penjualan=$id");
 
 while($user_data = mysqli_fetch_array($result))
 {
-    $Dalam_negeri = $penjualan_data ['Dalam_negeri'];
-    $Luar_negeri = $penjualan_data ['Luar_negeri'];
-    $Online = $penjualan_data ['Online'];
-    $Offline = $penjualan_data ['Offline'];
-    $id_produk = $penjualan_data ['id_produk'];
+    $Dalam_negeri = $user_data ['Dalam_negeri'];
+    $Luar_negeri = $user_data ['Luar_negeri'];
+    $Online = $user_data ['Online'];
+    $Offline = $user_data ['Offline'];
+    $id_produk = $user_data ['id_produk'];
 
 }
 ?>
-
+<link rel="stylesheet" href="style_tambahpenjualan.css">
 <body>
     <header>
         <h3>Formulir Edit Penjualan</h3>
@@ -48,7 +48,7 @@ while($user_data = mysqli_fetch_array($result))
 </tr>
 
 <tr>
-<td><input type="hidden" name="Id_penjualan" value="<?php echo  $_GET['Id_penjualan'];?>"></td>
+<td><input type="hidden" name="Id_penjualan" value="<?php echo  $_GET['id'];?>"></td>
 <td><input type="submit" name="simpan" value="Simpan"></td>
 </tr>
     </table>

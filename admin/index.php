@@ -15,7 +15,8 @@
             <li><a href="petani/indexpetani.php">Petani</a></li>
             <li><a href="peternak/index_peternak.php">Peternak</a></li>
             <li><a href="penjualan/index_penjualan.php">Penjualan</a></li>
-            <li><a href="produk_agribisnis/index_produkagribisnis">Produk Agribisnis</a></li>
+            <li><a href="produk_agribisnis/index_produkagribisnis.php">Produk Agribisnis</a></li>
+            <li><a href="kelas/index_kelas.php">Kelas</a></li>
         </Ul>
         </nav>
         
@@ -28,9 +29,9 @@
         </section>
     </main>
     <section class="user">
-    <h1 class=".heading">Data Peternak</h1>
+    <h1 class=".heading">Data User</h1>
     <br>
-        <a href="form_register.php" class="btn">Tambah Peternak</a>
+        <a href="form_register.php" class="btn">Tambah User</a>
         <br>
         <br>
         <table border="1" class="table">
@@ -47,7 +48,7 @@
             $query_mysql = mysqli_query($mysqli, "SELECT * FROM user") or die(mysqli_error($mysqli));
             $nomor = 1;
             while($data = mysqli_fetch_array($query_mysql)) { 
-            ?>
+            ?>,.,     
             <tr>
                 <td><?php echo $nomor++; ?></td>
                 <td><?php echo $data['Nama']; ?></td>

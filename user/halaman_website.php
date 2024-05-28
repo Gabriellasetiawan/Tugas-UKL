@@ -3,45 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylecoba.css">
     <title>Landing Page</title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li class="/Aquaponic Bussines Tugas akhir dasprog/user/Tema">Aquponik Business For Sustainability</li>
+    <div class="banner">
+    <div class="navbar">
+    <a class="logo">Harvestly</a>
+    <ul>
             <li><a href="/Aquaponic Bussines Tugas akhir dasprog/user/Information.php">Information</a></li>
             <li><a href="/Aquaponic Bussines Tugas akhir dasprog/user/Tutorial.php">Tutorial</a></li>
             <li><a class="active" href="/Aquaponic Bussines Tugas akhir dasprog/user/Bussines.php">Bussines</a></li>
+            <li><a href="/Aquaponic Bussines Tugas akhir dasprog/user/class.php">Class</a></li>
+            <li><a href="/Aquaponic Bussines Tugas akhir dasprog/user/Tutorial.php">Market</a></li>
+
+
         </ul>
-    </nav>
-    <header  class="header">
+    </div>
+    <div  class="content">
         <h1>Welcome to Our Website</h1>
         <p>Aquaponik Sistem For Sustainability</p>
-        <a href="#feauters" class="btn">Learn More</a>
-    </header>
-
-    <section id="features" class="features">
-        <div class="feature">
-            <img src="Aquaponic_04.jpg" alt="Feature 1">
-            <h2>Aquaponic</h2>
-            <p>Penjelasan lebih lengkap</p>
-        </div>  
-        
-        <div class="feature">
-            <img src="Cara membuat aquaponik.jpg" alt="Feature 2">
-<h2>Cara</h2>
-<p> Langkah-langkah membuat aquaponic</p>
+        <div>
+            <button type="button" href="form_register.php">Regist Now</button>
         </div>
-        <div class="feature">
-            <img src="peluang bisnis.jpg" alt="Feature 3">
-            <h2>Bisnis</h2>
-            <p>Peluang bisnis yang dapat diambil</p>
-        </div>    
-    </section>
-
-    <footer class="footer">
+        <div> <footer class="footer">
         <p>&copy; Untuk mendapatkan informasi klik tulisan kiri atas </p>
-    </footer>
+    </footer></div>
+</div>
+    </div>
+    
+
+    
+
+   
 </body>
 </html>

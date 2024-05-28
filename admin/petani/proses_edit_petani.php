@@ -5,13 +5,11 @@ if(isset($_POST['simpan'])){
 
     $ID_petani= $_POST['ID_petani'];
     $Nama_petani= $_POST['Nama_petani'];
-    $username= $_POST['username'];
-    $password= $_POST['password'];
-    $level= $_POST['level'];
+    $Umur_petani= $_POST['Umur_petani'];
 
-    $result = mysqli_query($mysqli, "UPDATE user
-    SET nama='$nama',username='$username',password='$password',level='$level'
-    WHERE id=$id");
+    $result = mysqli_query($mysqli, "UPDATE petani
+    SET Nama_petani='$Nama_petani',Umur_petani='$Umur_petani'
+    WHERE ID_petani=$id");
     header('Location: index.php');
 } else{
     die("Akses dilarang...");

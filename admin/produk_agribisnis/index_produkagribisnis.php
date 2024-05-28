@@ -15,7 +15,8 @@
             <li><a href="petani/indexpetani.php">Petani</a></li>
             <li><a href="peternak/index_peternak.php">Peternak</a></li>
             <li><a href="penjualan/index_penjualan.php">Penjualan</a></li>
-            <li><a href="produk_agribisnis/index_produkagribisnis">Produk Agribisnis</a></li>
+            <li><a href="produk_agribisnis/index_produkagribisnis.php">Produk Agribisnis</a></li>
+            <li><a href="kelas/index_kelas.php">Kelas</a></li>
         </Ul>
         </nav>
         
@@ -39,7 +40,9 @@
                 <th>id_produk</th>
                 <th>nama</th>
                 <th>jenis</th>
-                <th>jumlah  </th>
+                <th>jumlah</th>
+                <th>kelola</th>
+
 
             </tr>
             <?php

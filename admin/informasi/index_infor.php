@@ -15,7 +15,8 @@
             <li><a href="petani/indexpetani.php">Petani</a></li>
             <li><a href="peternak/index.php">Peternak</a></li>
             <li><a href="penjualan/index_penjualan.php">Penjualan</a></li>
-            <li><a href="produk_agribisnis/index_produkagribisnis">Produk Agribisnis</a></li>
+            <li><a href="produk_agribisnis/index_produkagribisnis.php">Produk Agribisnis</a></li>
+            <li><a href="kelas/index_kelas.php">Kelas</a></li>
         </Ul>
         </nav>
         
@@ -40,6 +41,7 @@
                 <th>judul_informasi</th>
                 <th>jenis_informasi</th>
                 <th>tanggal_informasi</th>
+                <th>isi_informasi</th>
                 <th>Kelola</th>
             </tr>
             <?php
@@ -54,6 +56,7 @@
                 <td><?php echo $data['judul_informasi']; ?></td>
                 <td><?php echo $data['jenis_informasi']; ?></td>
                 <td><?php echo $data['tanggal_informasi']; ?></td>
+                <td><?php echo $data['isi_informasi']; ?></td>
                 <td><a href='edit_informasi.php?id=<?php echo $data['id_informasi'];?>'>Edit</a>
                 <a href='delete_informasi.php?id=<?php echo $data['id_informasi'];?>'>Delete</a>
             </td>

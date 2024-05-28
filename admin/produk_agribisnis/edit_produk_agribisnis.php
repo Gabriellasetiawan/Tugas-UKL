@@ -1,19 +1,19 @@
 <?php
 include("../koneksi.php");
 
-if(!isset($_GET['id_produk'])){
+if(!isset($_GET['id'])){
     header('Location: index.php');
 }
-$id= $_GET['id_produk'];
+$id= $_GET['id'];
 
-$result= mysqli_query($mysqli, "SELECT * FROM produk_agribisnis WHERE id_produk=$id_produk");
+$result= mysqli_query($mysqli, "SELECT * FROM produk_agribisnis WHERE id_produk=$id");
 
 while($user_data = mysqli_fetch_array($result))
 {
-    $id_produk = $produk_agribisnis_data ['id_produk'];
-    $nama = $produk_agribisnis_data ['nama'];
-    $jenis = $produk_agribisnis_data ['jenis'];
-    $jumlah = $produk_agribisnis_data ['jumlah'];
+    $id_produk = $user_data ['id_produk'];
+    $nama = $user_data ['nama'];
+    $jenis = $user_data ['jenis'];
+    $jumlah = $user_data ['jumlah'];
 }
 ?>
 

@@ -6,21 +6,21 @@ if(!isset($_GET['id'])){
 }
 $id= $_GET['id'];
 
-$result= mysqli_query($mysqli, "SELECT * FROM informasi WHERE id_informasi=$id_informasi");
+$result= mysqli_query($mysqli, "SELECT * FROM informasi WHERE id_informasi=$id");
 
 while($user_data = mysqli_fetch_array($result))
 {
-    $id_informasi = $id_informasi ['id_informasi'];
-    $judul_informasi = $judul_informasi ['judul_informasi'];
-    $jenis_informasi = $jenis_informasi ['jenis_informasi'];
-    $tanggal_informasi = $tanggal_informasi ['tanggal_informasi'];
+    $judul_informasi = $user_data ['judul_informasi'];
+    $jenis_informasi = $user_data ['jenis_informasi'];
+    $tanggal_informasi = $user_data ['tanggal_informasi'];
+    $isi_informasi = $user_data ['isi_informasi'];
 }
 ?>
-
-<body>
+<link rel="stylesheet" href="style_tambahpenjualan.css"><body>
     <header>
-        <h3>Formulir Edit User</h3>
+        <h3>Formulir Edit Informasi</h3>
     </header>
+    
     
 <form method="post" action="proses_edit_informasi.php">
     <table>
@@ -34,9 +34,12 @@ while($user_data = mysqli_fetch_array($result))
 </tr>
 <tr>
         <td>tanggal_informasi	</td>
-        <td><input type="text" name="tanggal_informasi	" value="<?php echo $tanggal_informasi	;?>"></td>
+        <td><input type="text" name="tanggal_informasi	" value="<?php echo $tanggal_informasi;?>"></td>
 </tr>
-
+<tr>
+        <td>isi_informasi	</td>
+        <td><input type="text" name="isi_informasi	" value="<?php echo $isi_informasi;?>"></td>
+</tr>
 <tr>
 <td><input type="hidden" name="id" value="<?php echo  $_GET['id'];?>"></td>
 <td><input type="submit" name="simpan" value="Simpan"></td>
@@ -44,7 +47,7 @@ while($user_data = mysqli_fetch_array($result))
     </table>
 </form>
 </body>
-
+</html>
 
 
 

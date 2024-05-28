@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylehalaman.css">
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="/Aquaponic Bussines Tugas akhir dasprog/user/Information.php">Information</a></li>
+        <li><a href="/Aquaponic Bussines Tugas akhir dasprog/user/Information.php">Information</a></li>
             <li><a href="/Aquaponic Bussines Tugas akhir dasprog/user/Tutorial.php">Tutorial</a></li>
             <li><a class="active" href="/Aquaponic Bussines Tugas akhir dasprog/user/Bussines.php">Bussines</a></li>
+            <li><a href="/Aquaponic Bussines Tugas akhir dasprog/user/class.php">Class</a></li>
+            <li><a href="/Aquaponic Bussines Tugas akhir dasprog/user/Tutorial.php">Market</a></li>
         </ul>
     </nav>
     <header  class="header2">

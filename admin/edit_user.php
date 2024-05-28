@@ -16,7 +16,7 @@ while($user_data = mysqli_fetch_array($result))
     $level = $user_data ['Level'];
 }
 ?>
-
+<link rel="stylesheet" href="styleedit.css">
 <body>
     <header>
         <h3>Formulir Edit User</h3>
