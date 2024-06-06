@@ -9,10 +9,10 @@
 <body>
     <nav>
         <ul>
-            <li><a href="/Aquaponic Bussines Tugas akhir dasprog/user/Information.php">Information</a></li>
+        <li><a href="/Aquaponic Bussines Tugas akhir dasprog/user/Information2.php">Information</a></li>
             <li><a href="/Aquaponic Bussines Tugas akhir dasprog/user/class.php">Class</a></li>
             <li><a href="/Aquaponic Bussines Tugas akhir dasprog/user/market.php">Market</a></li>
-            <li><a class="login" href="/Aquaponic Bussines Tugas akhir dasprog/hallogin.php">Login</a></li>
+            <li><a href="/Aquaponic Bussines Tugas akhir dasprog/index.php">Log Out</a></li>
         </ul>
     </nav>
     <header  class="header2">
@@ -27,6 +27,7 @@
             <div class="feature3">
                 <h2><?php echo $data['nama_kelas'];?></h2>
                 <p><?php echo $data['isi_kelas'];?></p>
+                <a href="transaksi.php?id=<?php echo $data['id_kelas']; ?>"><button class="home-btn">Kunjungi Kelas</button></a>
             </div> 
         <?php } ?>
         

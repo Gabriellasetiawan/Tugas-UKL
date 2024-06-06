@@ -11,23 +11,15 @@
         <h1 class=".heading">Welcome admin!</h1>
         <nav>
         <Ul>
-        <li><a href="informasi/index_infor.php">Informasi</a></li>
-            <li><a href="petani/indexpetani.php">Petani</a></li>
-            <li><a href="peternak/index_peternak.php">Peternak</a></li>
-            <li><a href="penjualan/index_penjualan.php">Penjualan</a></li>
-            <li><a href="produk_agribisnis/index_produkagribisnis.php">Market</a></li>
-            <li><a href="kelas/index_kelas.php">Kelas</a></li>
+            <li><a href="/Aquaponic Bussines Tugas akhir dasprog/admin/index.php">User</a></li>
+            <li><a href="/Aquaponic Bussines Tugas akhir dasprog/admin/informasi/index_infor.php">Informasi</a></li>
+            <li><a href="/Aquaponic Bussines Tugas akhir dasprog/admin/penjualan/index_penjualan.php">Penjualan</a></li>
+            <li><a href="/Aquaponic Bussines Tugas akhir dasprog/admin/produk_agribisnis/index_produkagribisnis.php">Market</a></li>
+            <li><a href="/Aquaponic Bussines Tugas akhir dasprog/admin/kelas/index_kelas.php">Kelas</a></li>
+            <li><a href="../../hallogin.php">Log Out</a></li>
         </Ul>
         </nav>
         
-        <main>
-        <section>
-            <h2>Admin Information</h2>
-            <p>Name: Gabriella Fajar Setiawan</p>
-            <p>Email: gabysetiawan17@gmail.com</p>
-            <p>Location: SMK Telkom Sidoarjo</p>
-        </section>
-    </main>
     <section class="user">
     <h1 class=".heading">Data Market</h1>
     <br>
@@ -37,11 +29,10 @@
         <table border="1" class="table">
             <tr>
                 <th>Nomor</th>
-                <th>id_market</th>
-                <th>nama_market</th>
-                <th>jenis_market</th>
-                <th>isi_market</th>
-                <th>kelola</th>
+                <th>Nama Market</th>
+                <th>Jenis Market</th>
+                <th>Isi Market</th>
+                <th>Kelola</th>
 
 
             </tr>
@@ -53,12 +44,11 @@
             ?>
             <tr>
                 <td><?php echo $nomor++; ?></td>
-                <td><?php echo $data['id_market']; ?></td>
                 <td><?php echo $data['nama_market']; ?></td>
-                <td><?php echo $data['jenis_market']; ?></td>
+                <td><?php echo $data['website_market']; ?></td>
                 <td><?php echo $data['isi_market']; ?></td>
-                <td><a href='edit_produk_agribisnis.php?id=<?php echo $data['id_produk'];?>'>Edit</a>
-                <a href='delete_produk_agribisnis?id=<?php echo $data['id_produk'];?>'>Delete</a>
+                <td><a href='edit_produk_agribisnis.php?id=<?php echo $data['id_market'];?>'>Edit</a>
+                <a href='delete_produk_agribisnis?id=<?php echo $data['id_market'];?>'>Delete</a>
             </td>
             
             <?php } ?>
@@ -66,12 +56,14 @@
         </table>
         <br>
         <br>
-    <a href="../index.php" class="btn">Log Out</a>
     </section>
 
 
     <footer>
-        <p>&copy; 2024 admin Page. All rights reserved.</p>
+            <h2>&copy;Admin Information</h2>
+            <p>Name: Gabriella Fajar Setiawan</p>
+            <p>Email: gabysetiawan17@gmail.com</p>
+            <p>Location: SMK Telkom Sidoarjo</p>
     </footer>
 </body>
 </html>

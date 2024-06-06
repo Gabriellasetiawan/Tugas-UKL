@@ -9,24 +9,25 @@
 <body>
     <nav>
         <ul>
-            <li><a href="/Aquaponic Bussines Tugas akhir dasprog/user/Information.php">Information</a></li>
+        <li><a href="/Aquaponic Bussines Tugas akhir dasprog/user/Information2.php">Information</a></li>
             <li><a href="/Aquaponic Bussines Tugas akhir dasprog/user/class.php">Class</a></li>
             <li><a href="/Aquaponic Bussines Tugas akhir dasprog/user/market.php">Market</a></li>
-            <li><a class="login" href="/Aquaponic Bussines Tugas akhir dasprog/hallogin.php">Login</a></li>
+            <li><a href="/Aquaponic Bussines Tugas akhir dasprog/index.php">Log Out</a></li>
         </ul>
     </nav>
     <header  class="header2">
-        <h1>Yuk Belajar Agribisnis</h1>
+        <h1>Rekomendasi Pasar Agribisnis</h1>
     </header>
     <section>
     <?php
         include '../koneksi.php';
-        $query_mysql = mysqli_query($mysqli, "SELECT * FROM kelas") or die (mysqli_error($mysqli));
+        $query_mysql = mysqli_query($mysqli, "SELECT * FROM market") or die (mysqli_error($mysqli));
         while($data = mysqli_fetch_array($query_mysql)) {
         ?>
             <div class="feature3">
-                <h2><?php echo $data['nama_kelas'];?></h2>
-                <p><?php echo $data['isi_kelas'];?></p>
+                <h2><?php echo $data['nama_market'];?></h2>
+                <p><?php echo $data['isi_market'];?></p>
+                <a href="<?php echo $data ['website_market'];?>"><button class="home-btn">Kunjungi Market</button></a>
             </div> 
         <?php } ?>
         

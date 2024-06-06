@@ -13,7 +13,7 @@
             <input type="text" name="username" placeholder="username">
             <input type="password" name="password" placeholder="password">
             
-                <button class="button">Login</button>
+                <button  class="button" a href="/Aquaponic Bussines Tugas akhir dasprog/user/afterlogin.php">Login</button>
             
         </form>
         <div class="forgot">

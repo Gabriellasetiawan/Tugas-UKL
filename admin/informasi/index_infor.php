@@ -11,23 +11,14 @@
         <h1 class=".heading">Welcome admin!</h1>
         <nav>
         <Ul>
-             <li><a href="informasi/index_infor.php">Informasi</a></li>
-            <li><a href="petani/indexpetani.php">Petani</a></li>
-            <li><a href="peternak/index.php">Peternak</a></li>
-            <li><a href="penjualan/index_penjualan.php">Penjualan</a></li>
-            <li><a href="produk_agribisnis/index_produkagribisnis.php">Market</a></li>
-            <li><a href="kelas/index_kelas.php">Kelas</a></li>
+            <li><a href="/Aquaponic Bussines Tugas akhir dasprog/admin/index.php">User</a></li>
+            <li><a href="/Aquaponic Bussines Tugas akhir dasprog/admin/informasi/index_infor.php">Informasi</a></li>
+            <li><a href="/Aquaponic Bussines Tugas akhir dasprog/admin/penjualan/index_penjualan.php">Penjualan</a></li>
+            <li><a href="/Aquaponic Bussines Tugas akhir dasprog/admin/produk_agribisnis/index_produkagribisnis.php">Market</a></li>
+            <li><a href="/Aquaponic Bussines Tugas akhir dasprog/admin/kelas/index_kelas.php">Kelas</a></li>
+            <li><a href="../../hallogin.php">Log Out</a></li>
         </Ul>
         </nav>
-        
-        <main>
-        <section>
-            <h2>Admin Information</h2>
-            <p>Name: Gabriella Fajar Setiawan</p>
-            <p>Email: gabysetiawan17@gmail.com</p>
-            <p>Location: SMK Telkom Sidoarjo</p>
-        </section>
-    </main>
     <section class="user">
     <h1 class=".heading">Data Informasi</h1>
     <br>
@@ -37,11 +28,10 @@
         <table border="1" class="table">
             <tr>
                 <th>Nomor</th>
-                <th>id_informasi</th>
-                <th>judul_informasi</th>
-                <th>jenis_informasi</th>
-                <th>tanggal_informasi</th>
-                <th>isi_informasi</th>
+                <th>Judul Informasi</th>
+                <th>Jenis Informasi</th>
+                <th>Tanggal Informasi</th>
+                <th>Isi Informasi</th>
                 <th>Kelola</th>
             </tr>
             <?php
@@ -52,7 +42,6 @@
             ?>
             <tr>
                 <td><?php echo $nomor++; ?></td>
-                <td><?php echo $data['id_informasi']; ?></td>
                 <td><?php echo $data['judul_informasi']; ?></td>
                 <td><?php echo $data['jenis_informasi']; ?></td>
                 <td><?php echo $data['tanggal_informasi']; ?></td>
@@ -66,12 +55,14 @@
         </table>
         <br>
         <br>
-    <a href="../index.php" class="btn">Log Out</a>
     </section>
 
 
     <footer>
-        <p>&copy; 2024 admin Page. All rights reserved.</p>
+            <h2>&copy;Admin Information</h2>
+            <p>Name: Gabriella Fajar Setiawan</p>
+            <p>Email: gabysetiawan17@gmail.com</p>
+            <p>Location: SMK Telkom Sidoarjo</p>
     </footer>
 </body>
 </html>

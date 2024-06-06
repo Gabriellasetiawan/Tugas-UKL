@@ -1,63 +1,54 @@
 <?php
 include("../koneksi.php");
 
-if(!isset($_GET['id'])){
+if (!isset($_GET['id'])) {
     header('Location: index.php');
+    exit();
 }
-$id= $_GET['id_kelas'];
+$id = $_GET['id'];
 
-$result= mysqli_query($mysqli, "SELECT * FROM kelas WHERE id_kelas=$id");
+$result = mysqli_query($mysqli, "SELECT * FROM kelas WHERE id_kelas=$id");
 
-while($user_data = mysqli_fetch_array($result))
-{
-    $nama = $user_data ['Nama'];
-    $username = $user_data ['Username'];
-    $password = $user_data ['Password'];
-    $level = $user_data ['Level'];
+if ($result) {
+    $user_data = mysqli_fetch_array($result);
+    $nama_kelas = $user_data['nama_kelas'];
+    $website_kelas = $user_data['website_kelas'];
+    $isi_kelas = $user_data['isi_kelas'];
+} else {
+    die("Query Error: " . mysqli_error($mysqli));
 }
 ?>
-<link rel="stylesheet" href="styleedit.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Kelas</title>
+    <link rel="stylesheet" href="style_tambahpenjualan.css">
+</head>
 <body>
     <header>
-        <h3>Formulir Edit User</h3>
+        <h3>Formulir Edit Kelas</h3>
     </header>
-    
-<form method="post" action="proses_edit_user.php">
-    <table>
-        <tr>
-        <td>Nama</td>
-        <td><input type="text" name="nama" value="<?php echo $nama;?>"></td>
-</tr>
-<tr>
-        <td>Username</td>
-        <td><input type="text" name="username" value="<?php echo $username;?>"></td>
-</tr>
-<tr>
-        <td>Password</td>
-        <td><input type="password" name="password" value="<?php echo $password;?>"></td>
-</tr>
-<tr>
-        <td>Level</td>
-        <td>
-            <select name="level" id="level" required>
-                <option disabled selected><?php echo $password ?></option>
-                <option value="admin">Admin</option>
-                <option value="user">User</option>
-</select>
-        </td>
-</tr>
-<tr>
-<td><input type="hidden" name="id" value="<?php echo  $_GET['id'];?>"></td>
-<td><input type="submit" name="simpan" value="Simpan"></td>
-</tr>
-    </table>
-</form>
+    <form method="post" action="proses_edit_produk_agribisnis.php">
+        <table>
+            <tr>
+                <td>Nama Kelas</td>
+                <td><input type="text" name="nama_kelas" value="<?php echo $nama_kelas; ?>"></td>
+            </tr>
+            <tr>
+                <td>Website Kelas</td>
+                <td><input type="text" name="website_kelas" value="<?php echo $website_kelas; ?>"></td>
+            </tr>
+            <tr>
+                <td>Isi Kelas</td>
+                <td><input type="text" name="isi_kelas" value="<?php echo $isi_kelas; ?>"></td>
+            </tr>
+            <tr>
+                <td><input type="hidden" name="id" value="<?php echo $id; ?>"></td>
+                <td><input type="submit" name="simpan" value="Simpan"></td>
+            </tr>
+        </table>
+    </form>
 </body>
-
-
-
-
-
-
-
-
+</html>

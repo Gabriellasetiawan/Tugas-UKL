@@ -1,57 +1,54 @@
 <?php
 include("../koneksi.php");
 
-if(!isset($_GET['id'])){
+if (!isset($_GET['id'])) {
     header('Location: index.php');
+    exit();
 }
-$id= $_GET['id'];
+$id = $_GET['id'];
 
-$result= mysqli_query($mysqli, "SELECT * FROM produk_agribisnis WHERE id_produk=$id");
+$result = mysqli_query($mysqli, "SELECT * FROM market WHERE id_market=$id");
 
-while($user_data = mysqli_fetch_array($result))
-{
-    $id_produk = $user_data ['id_produk'];
-    $nama = $user_data ['nama'];
-    $jenis = $user_data ['jenis'];
-    $jumlah = $user_data ['jumlah'];
+if ($result) {
+    $user_data = mysqli_fetch_array($result);
+    $nama_market = $user_data['nama_market'];
+    $website_market = $user_data['website_market'];
+    $isi_market = $user_data['isi_market'];
+} else {
+    die("Query Error: " . mysqli_error($mysqli));
 }
 ?>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Market</title>
+    <link rel="stylesheet" href="style_tambahpenjualan.css">
+</head>
 <body>
     <header>
-        <h3>Formulir Edit Peternak</h3>
+        <h3>Formulir Edit Market</h3>
     </header>
-    
-<form method="post" action="proses_edit_produk_agribisnis.php">
-    <table>
-        <tr>
-        <td>id_produk</td>
-        <td><input type="text" name="id_produk" value="<?php echo $id_produk;?>"></td>
-</tr>
-<tr>
-        <td>nama</td>
-        <td><input type="text" name="nama" value="<?php echo $nama;?>"></td>
-</tr>
-<tr>
-        <td>jenis</td>
-        <td><input type="text" name="jenis" value="<?php echo $jenis;?>"></td>
-</tr>
-<tr>
-        <td>jumlah</td>
-        <td><input type="text" name="jumlah" value="<?php echo $jumlah;?>"></td>
-</tr>
-<tr>
-<td><input type="hidden" name="id" value="<?php echo  $_GET['id'];?>"></td>
-<td><input type="submit" name="simpan" value="Simpan"></td>
-</tr>
-    </table>
-</form>
+    <form method="post" action="proses_edit_produk_agribisnis.php">
+        <table>
+            <tr>
+                <td>Nama Market</td>
+                <td><input type="text" name="nama_market" value="<?php echo $nama_market; ?>"></td>
+            </tr>
+            <tr>
+                <td>Website Market</td>
+                <td><input type="text" name="website_market" value="<?php echo $website_market; ?>"></td>
+            </tr>
+            <tr>
+                <td>Isi Market</td>
+                <td><input type="text" name="isi_market" value="<?php echo $isi_market; ?>"></td>
+            </tr>
+            <tr>
+                <td><input type="hidden" name="id" value="<?php echo $id; ?>"></td>
+                <td><input type="submit" name="simpan" value="Simpan"></td>
+            </tr>
+        </table>
+    </form>
 </body>
-
-
-
-
-
-
-
-
+</html>

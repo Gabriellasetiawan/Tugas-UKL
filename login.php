@@ -24,12 +24,12 @@ if($cek > 0){
             $_SESSION['username'] = $username;
             $_SESSION['Level'] = "user";        
         
-            header("Location:user/halaman_website.php");
+            header("Location:afterlogin.php");
  
         }else{
             header("Location:index.php");
         }
-}else{
+}else{ 
     header("Location:index.php?pesan=gagal");
 }
 ?>  
